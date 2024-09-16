@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weatherly</title>
+    <link rel="icon" type="image/png" href="./images/icons/day/113.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="resp.css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <div id="loading-screen">
+      <div class="spinner"></div>
+      <p>Loading...</p>
+    </div>
+    <div id="content" style="display: none">
+      <!-- Navbar -->
+      <section>
+        <nav>
+          <div class="search-container">
+            <input class="search-input" type="text" placeholder="Enter your city.." />
+            <button class="search-button">
+              <img src="images/search.svg" alt="" />
+            </button>
+            <div class="clock" id="clock"></div>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn">Languages</button>
+            <div class="dropdown-content">
+              <a href="index.html">English</a>
+              <a href="SK.html">Slovak <img src="sk.png" alt="" /></a>
+            </div>
+          </div>
+        </nav>
+      </section>
+
+      <!-- Today's forecast -->
+      <section class="today-forecast">
+        <div class="full-box">
+          <h2 id="CurentCityName"></h2>
+          <div id="CurentBox">
+            <img src="" id="CurentIcon" />
+            <p id="CurentTemp">0℃</p>
+          </div>
+          <h4 id="CurentWeather"></h4>
+        </div>
+        <div class="small-boxes">
+          <div class="small-box">
+            <p>UV</p>
+            <img src="./images/UV.png" id="uvImg" />
+            <br />
+            <p id="uvIndicator"></p>
+          </div>
+          <div class="small-box">
+            <p>Vietor</p>
+            <img src="./images/Wind.png" id="windImg" />
+            <br />
+            <p id="windIndicator"></p>
+          </div>
+          <div class="small-box">
+            <p>Tlak</p>
+            <img src="./images/Pressure.png" id="pressureImg" />
+            <br />
+            <p id="pressureIndicator"></p>
+          </div>
+          <div class="small-box">
+            <p>Vlhkosť</p>
+            <img src="./images/Humidity.png" id="humidityImg" />
+            <br />
+            <p id="humidityIndicator"></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Hourly forecast -->
+      <section class="hourly-forecast">
+        <div class="long-box" id="hourly-forecast-container"></div>
+      </section>
+
+      <!-- Daily forecast -->
+      <section class="daily-forecast">
+        <div class="large-box" id="day1"></div>
+        <div class="large-box" id="day2"></div>
+        <div class="large-box" id="day3"></div>
+      </section>
+      <div id="footer">
+        <p id="footerP">
+          Weatherly poháňané <a href="https://www.weatherapi.com/" title="Weather API">WeatherAPI.com</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
